@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import { Navbar, Header, Products, Footer } from './components/features';
 import Phones from './components/pages/Phones';
 import Books from './components/pages/Books';
@@ -20,15 +25,12 @@ function App() {
             <Header />
             <Products />
           </Route>
-          <Route path='/my-order'>
-            <Header />
-            <Products />
-          </Route>
           <Route path='/phones' component={Phones} />
           <Route path='/books' component={Books} />
           <Route path='/shoes' component={Shoes} />
           <Route path='/clothes' component={Clothes} />
           <Route path='/homeProducts' component={HomeProducts} />
+          <Redirect to='/' />
         </Switch>
         <Footer />
       </Router>
