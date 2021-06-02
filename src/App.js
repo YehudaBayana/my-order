@@ -20,6 +20,10 @@ function App() {
             <Header />
             <Products />
           </Route>
+          <Route path='/my-order'>
+            <Header />
+            <Products />
+          </Route>
           <Route path='/phones' component={Phones} />
           <Route path='/books' component={Books} />
           <Route path='/shoes' component={Shoes} />
