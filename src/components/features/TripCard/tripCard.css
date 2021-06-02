@@ -1,0 +1,48 @@
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card-wrapper .card {
+  width: 250px;
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: linear-gradient(
+    to left,
+    rgb(151, 184, 255),
+    rgb(239, 244, 255)
+  );
+  border-radius: 20px;
+  height: fit-content;
+}
+
+.card-wrapper .card h1,
+.card-wrapper .card h3,
+.card-wrapper .card p,
+.card-wrapper .card span {
+  padding: 5px 20px;
+  font-weight: 600;
+}
+
+.card-wrapper .card span {
+  cursor: pointer;
+  font-size: 20px;
+}
+.card-wrapper .card h1 {
+  color: rgb(71, 109, 133);
+}
+
+.card-wrapper .card i {
+  color: rgb(0, 0, 255);
+  font-size: 20px;
+}
+
+.card-wrapper img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

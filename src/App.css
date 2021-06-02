@@ -1,0 +1,55 @@
+:root {
+  --darkBlue: #007cc7;
+  --lighterBlue: #12232e;
+  --lightestBlue: #4da8da;
+  --shdowOfDarkBlue: #203647;
+  --shdowOfLightBlue: #eefbfb;
+  --white: #f3f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  direction: rtl;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.h2-trips {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 100px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.hero-text .btn {
+  font-size: 19px;
+  padding: 15px 35px;
+}
