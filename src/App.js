@@ -7,11 +7,13 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { Navbar, Header, Products, Footer } from './components/features';
-import Phones from './components/pages/Phones';
-import Books from './components/pages/Books';
-import Shoes from './components/pages/Shoes';
-import Clothes from './components/pages/Clothes';
-import HomeProducts from './components/pages/HomeProducts';
+import {
+  Phones,
+  Books,
+  Shoes,
+  Clothes,
+  HomeProducts,
+} from './components/pages';
 import ScrollToTop from './ScrollToTop';
 
 function App() {

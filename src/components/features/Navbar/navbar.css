@@ -6,8 +6,8 @@ nav {
 }
 
 .container {
-  max-width: 1400px;
-  padding: 0 15px;
+  max-width: 1355px;
+  padding: 0 45px;
   margin: 0 auto;
   height: inherit;
 }
@@ -40,4 +40,10 @@ nav ul li {
 nav ul li:hover {
   color: rgb(210, 235, 255);
   border-bottom: 1px solid white;
+}
+
+@media (max-width: 773px) {
+  .container {
+    padding: 0 13px;
+  }
 }

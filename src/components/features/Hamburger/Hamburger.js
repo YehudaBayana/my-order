@@ -19,16 +19,16 @@ function Hamburger() {
         <div className='overlay-content'>
           <h2>yuda bayana</h2>
           <Link to='/' onClick={() => closeNav()}>
-            Home
+            ראשי
+          </Link>
+          <Link to='/phones' onClick={() => closeNav()}>
+            אלקטרוניקה
+          </Link>
+          <Link to='clothes' onClick={() => closeNav()}>
+            אופנה
           </Link>
           <Link to='/' onClick={() => closeNav()}>
-            Services
-          </Link>
-          <Link to='/' onClick={() => closeNav()}>
-            Clients
-          </Link>
-          <Link to='/' onClick={() => closeNav()}>
-            Contact
+            צור קשר
           </Link>
         </div>
       </div>

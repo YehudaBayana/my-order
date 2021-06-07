@@ -183,6 +183,16 @@ form.example::after {
 @media (max-width: 512px) {
   .order-page .all-products .product-card {
     width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
     height: fit-content;
+  }
+  .order-page .all-products .product-card img {
+    width: 37%;
+    flex: 1;
+  }
+  .order-page .all-products .product-card p {
+    flex: 3;
   }
 }

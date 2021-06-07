@@ -91,10 +91,10 @@ function Shoes() {
     <>
       <div className='container'>
         <div className='form-wrapper'>
-          <form class='example' action='/action_page.php'>
+          <form className='example' action='/action_page.php'>
             <input type='text' placeholder='Search..' name='search' />
             <button type='submit'>
-              <i class='fa fa-search'></i>
+              <i className='fa fa-search'></i>
             </button>
             <h2>יהודה ביינה</h2>
           </form>
@@ -133,12 +133,12 @@ function Shoes() {
           <div className='filter-bit'>
             <div className='buttons'>
               <span>
-                <i class='far fa-heart'>{'  '}add to favorites</i>
+                <i className='far fa-heart'>{'  '}add to favorites</i>
               </span>
             </div>
             <div className='apply-buttons'>
               <span>
-                <i class='fas fa-search'> {'  '}140 results for phones</i>
+                <i className='fas fa-search'> {'  '}140 results for phones</i>
               </span>
             </div>
           </div>
@@ -164,9 +164,10 @@ function Shoes() {
         <div className='order-page'>
           <h2>נעליים</h2>
           <div className='all-products'>
-            {shoes.map((phone) => {
+            {shoes.map((phone, index) => {
               return (
                 <ActualBook
+                  key={index}
                   imgUrl={phone.imgUrl}
                   title={phone.title}
                   price={phone.price}
