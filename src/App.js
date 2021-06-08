@@ -6,7 +6,13 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import { Navbar, Header, Products, Footer } from './components/features';
+import {
+  Navbar,
+  Header,
+  Products,
+  Footer,
+  Contact,
+} from './components/features';
 import {
   Phones,
   Books,
@@ -32,6 +38,7 @@ function App() {
           <Route path='/shoes' component={Shoes} />
           <Route path='/clothes' component={Clothes} />
           <Route path='/homeProducts' component={HomeProducts} />
+          <Route path='/contact' component={Contact} />
           <Redirect to='/' />
         </Switch>
         <Footer />

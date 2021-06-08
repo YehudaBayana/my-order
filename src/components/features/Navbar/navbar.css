@@ -2,7 +2,7 @@ nav {
   height: 98px;
   width: 100%;
   background: steelblue;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .container {
@@ -26,12 +26,13 @@ h2 {
 nav ul {
   list-style: none;
   display: flex;
-  font-size: 22px;
+  flex-wrap: wrap;
+  font-size: 18px;
 }
 
 nav ul li {
-  padding: 15px;
-  margin: 5px 20px;
+  padding: 9px 5px;
+  margin: 5px 15px;
   cursor: pointer;
   transition: color 0.4s;
   color: white;

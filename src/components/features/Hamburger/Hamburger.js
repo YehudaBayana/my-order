@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 function Hamburger() {
   function openNav() {
-    document.getElementById('myNav').style.height = '100%';
+    document.getElementById('fullNav').style.height = '100%';
   }
 
   function closeNav() {
-    document.getElementById('myNav').style.height = '0%';
+    document.getElementById('fullNav').style.height = '0%';
   }
   return (
     <>
-      <div id='myNav' className='overlay'>
+      <div id='fullNav' className='overlay'>
         <span className='closebtn' onClick={() => closeNav()}>
           &times;
         </span>
@@ -22,12 +22,21 @@ function Hamburger() {
             ראשי
           </Link>
           <Link to='/phones' onClick={() => closeNav()}>
-            אלקטרוניקה
+            פלאפונים
           </Link>
           <Link to='clothes' onClick={() => closeNav()}>
-            אופנה
+            ביגוד
           </Link>
-          <Link to='/' onClick={() => closeNav()}>
+          <Link to='/shoes' onClick={() => closeNav()}>
+            נעליים
+          </Link>
+          <Link to='/homeProducts' onClick={() => closeNav()}>
+            מוצרי בית
+          </Link>
+          <Link to='/books' onClick={() => closeNav()}>
+            ספרים
+          </Link>
+          <Link to='/contact' onClick={() => closeNav()}>
             צור קשר
           </Link>
         </div>

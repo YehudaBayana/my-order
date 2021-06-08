@@ -1,5 +1,6 @@
-import Footer from '../features/Footer';
-import Navbar from '../features/Navbar';
-import Header from '../features/Header';
-import Products from '../features/Products';
-export { Footer, Navbar, Header, Products };
+import Footer from './Footer';
+import Navbar from './Navbar';
+import Header from './Header';
+import Products from './Products';
+import Contact from './Contact/Contact';
+export { Footer, Navbar, Header, Products, Contact };

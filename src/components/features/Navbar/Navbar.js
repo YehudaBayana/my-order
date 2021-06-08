@@ -20,15 +20,27 @@ function Navbar() {
         <div className='container'>
           <div className='navbar-content-wrapper'>
             <h2 className='logo'>יהודה ביינה</h2>
-            {size > 700 ? (
+            {size > 906 ? (
               <ul>
                 <Link to='/'>
                   <li>ראשי</li>
                 </Link>
-                <a href='#section'>
-                  <li>מוצרים</li>
-                </a>
-                <Link>
+                <Link to='/phones'>
+                  <li>פלאפונים</li>
+                </Link>
+                <Link to='/clothes'>
+                  <li>ביגוד</li>
+                </Link>
+                <Link to='/shoes'>
+                  <li>נעליים</li>
+                </Link>
+                <Link to='/homeProducts'>
+                  <li>מוצרי בית</li>
+                </Link>
+                <Link to='/books'>
+                  <li>ספרים</li>
+                </Link>
+                <Link to='/contact'>
                   <li>צור קשר</li>
                 </Link>
               </ul>
