@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ColorContext } from '../../../App';
 import './footer.css';
 
 const Footer = () => {
+  const { theme } = useContext(ColorContext);
   return (
     <>
-      <footer className='footer-distributed'>
+      <footer className='footer-distributed' style={{ backgroundColor: theme }}>
         <div className='container'>
           <div className='footer-right'>
             <a href='#'>
@@ -24,7 +27,7 @@ const Footer = () => {
           <div className='footer-left'>
             <p className='footer-links'>
               <a href='#'>ראשי</a> · <a href='#'>מוצרים</a> ·{' '}
-              <a href='#'>צור קשר</a>
+              <Link to='/contact'>צור קשר</Link>
             </p>
             <p>yuda bayana &copy; 2021</p>
           </div>

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ColorContext } from '../../../App';
 import './header.css';
 
 function Header() {
+  const { theme, changeColor } = useContext(ColorContext);
   return (
     <>
-      <header>
+      <header style={{ backgroundColor: theme }}>
         <div className='container'>
           <div className='content-wrapper'>
             <div className='the-text'>
@@ -14,8 +16,8 @@ function Header() {
                 eum blanditiis! Perferendis nemo, soluta eveniet eius cupiditate
                 mollitia? Molestiae, fugit!
               </p>
-              <a href='#' className='btn btn-link'>
-                קרא עוד
+              <a onClick={changeColor} href='#' className='btn btn-link'>
+                {theme === 'steelblue' ? 'שנה רקע לבורדו' : 'שנה רקע לכחול'}
               </a>
             </div>
             <form className='header-form'>
@@ -23,7 +25,9 @@ function Header() {
               <input type='text' placeholder='שם פרטי' required />
               <input type='text' placeholder='שם פרטי' required />
               <input type='email' placeholder='אימייל' required />
-              <button className='btn'>שלח</button>
+              <button className='btn' style={{ backgroundColor: theme }}>
+                שלח
+              </button>
             </form>
           </div>
         </div>

@@ -62,9 +62,9 @@ function Products() {
             />
           );
         })}
-        <a style={{ margin: '20px auto' }} href='#' className='btn '>
+        {/* <a style={{ margin: '20px auto' }} href='#' className='btn '>
           קרא עוד
-        </a>
+        </a> */}
       </div>
     </section>
   );

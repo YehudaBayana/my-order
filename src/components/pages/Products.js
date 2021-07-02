@@ -1,92 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './allPages.css';
-const phones = [
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1557189750-56d1be9e963a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1610672777373-c0f6229b950a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvbmV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1588058365548-9efe5acb8077?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhvbmV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1544228865-7d73678c0f28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1529885171768-434f71d10f32?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1544866092-1935c5ef2a8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-  {
-    imgUrl:
-      'https://images.unsplash.com/photo-1592898741947-bc9570c9f5bf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBob25lfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    title: 'Iphone 11 pro max 256GB',
-    price: 'ILS 812.25',
-    info: 'Trending at ILS 893.48+ILS 119.95 shipping  estimatefrom United States',
-  },
-];
+import './products.css';
 
 function ActualIphone(props) {
-  const { imgUrl, title, price, info } = props;
+  const { imgUrl, title, price, info, id } = props;
   return (
     <div className='product-card'>
       <img src={imgUrl} alt='' />
-      <p>{title} </p>
+      <Link to={`/${id}`}>
+        <p>{title} </p>
+      </Link>
       <h3>{price}</h3>
       <h5>{info}</h5>
     </div>
   );
 }
 
-function Phones() {
+function Products({ products, imgUrl, productName }) {
   return (
     <>
       <div className='container'>
@@ -109,10 +39,7 @@ function Phones() {
           <a href='#'>sadsdcsd</a>
           <a href='#'>sadsdcsd</a>
         </span>
-        <img
-          src='https://cdn.pixabay.com/photo/2016/05/27/08/51/mobile-phone-1419275__340.jpg'
-          alt=''
-        />
+        <img src={imgUrl} alt='' />
       </div>
       <div className='container'>
         <div className='filter-bit-wrapper'>
@@ -162,16 +89,17 @@ function Phones() {
           />
         </div>
         <div className='order-page'>
-          <h2>פלאפונים</h2>
+          <h2>{productName}</h2>
           <div className='all-products'>
-            {phones.map((phone, index) => {
+            {products.map((product) => {
               return (
                 <ActualIphone
-                  key={index}
-                  imgUrl={phone.imgUrl}
-                  title={phone.title}
-                  price={phone.price}
-                  info={phone.info}
+                  key={product.id}
+                  imgUrl={product.imgUrl}
+                  title={product.title}
+                  price={product.price}
+                  info={product.info}
+                  id={product.id}
                 />
               );
             })}
@@ -252,4 +180,4 @@ function Phones() {
   );
 }
 
-export default Phones;
+export default Products;

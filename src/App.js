@@ -1,47 +1,30 @@
-import React from 'react';
-import './App.css';
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
-import {
-  Navbar,
-  Header,
-  Products,
-  Footer,
-  Contact,
-} from './components/features';
-import {
-  Phones,
-  Books,
-  Shoes,
-  Clothes,
-  HomeProducts,
-} from './components/pages';
+import React, { useState, createContext } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
+import './App.css';
+import { Navbar, Footer } from './components/features';
+import RouterApp from './RouterApp';
+
+export const ColorContext = createContext();
+const ContextProvider = ColorContext.Provider;
 
 function App() {
+  const [theme, setTheme] = useState('steelblue');
+  function changeColor() {
+    setTheme((oldValue) =>
+      oldValue === 'steelblue' ? '#932432' : 'steelblue'
+    );
+  }
+
   return (
     <>
       <Router>
         <ScrollToTop />
-        <Navbar />
-        <Switch>
-          <Route path='/' exact>
-            <Header />
-            <Products />
-          </Route>
-          <Route path='/phones' component={Phones} />
-          <Route path='/books' component={Books} />
-          <Route path='/shoes' component={Shoes} />
-          <Route path='/clothes' component={Clothes} />
-          <Route path='/homeProducts' component={HomeProducts} />
-          <Route path='/contact' component={Contact} />
-          <Redirect to='/' />
-        </Switch>
-        <Footer />
+        <ContextProvider value={{ theme, changeColor }}>
+          <Navbar />
+          <RouterApp />
+          <Footer />
+        </ContextProvider>
       </Router>
     </>
   );

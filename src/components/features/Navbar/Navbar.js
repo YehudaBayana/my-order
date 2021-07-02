@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import Hamburger from '../Hamburger/Hamburger';
+import { ColorContext } from '../../../App';
 
 function Navbar() {
+  const theme = useContext(ColorContext).theme;
   const [size, setSize] = useState(window.innerWidth);
   const checkSize = () => {
     setSize(window.innerWidth);
@@ -16,7 +18,7 @@ function Navbar() {
 
   return (
     <>
-      <nav id='navbar'>
+      <nav id='navbar' style={{ backgroundColor: theme }}>
         <div className='container'>
           <div className='navbar-content-wrapper'>
             <h2 className='logo'>יהודה ביינה</h2>

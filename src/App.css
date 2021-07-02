@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+a {
+  all: unset;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -52,4 +56,13 @@ img {
 .hero-text .btn {
   font-size: 19px;
   padding: 15px 35px;
+}
+
+i {
+  margin: 0 10px;
+}
+
+span {
+  margin: 0;
+  padding: 0;
 }

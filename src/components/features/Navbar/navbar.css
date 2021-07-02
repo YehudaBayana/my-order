@@ -1,4 +1,4 @@
-nav {
+#nav {
   height: 98px;
   width: 100%;
   background: steelblue;
@@ -17,6 +17,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: inherit;
+  padding: 20px 0;
 }
 
 h2 {
